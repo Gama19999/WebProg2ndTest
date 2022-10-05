@@ -1,0 +1,284 @@
+/* 
+    Created on : 4 oct. 2022, 22:02:25
+    Author     : gamars
+    Topics     : Basic,Gradients,MultiCol,Flex,Buttons,Lists,NavBars,Pseudos,GalleryImg,Dropdown,StyleImg
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    box-sizing: border-box;
+    background: black;
+    color: whitesmoke;
+}
+
+@font-face {
+    font-family: "Courier Prime";
+    src: url("fonts/CourierPrime-Regular.ttf");
+    src: url("fonts/CourierPrime-Regular.ttf") format("tff");
+}
+@font-face {
+    font-family: "PoynterText";
+    src: url("fonts/PoynterText Regular.ttf");
+    src: url("fonts/PoynterText Regular.ttf") format("tff");
+}
+@font-face {
+    font-family: "Silkscreen";
+    src: url("fonts/Silkscreen-Regular.ttf");
+    src: url("fonts/Silkscreen-Regular.ttf") format("tff");
+}
+@font-face {
+    font-family: "Fredericka the Great";
+    src: url("fonts/FrederickatheGreat-Regular.ttf");
+    src: url("fonts/FrederickatheGreat-Regular.ttf") format("tff");
+}
+@font-face {
+    font-family: "Rockwell Nova";
+    src: url("fonts/RockwellNova.ttf");
+    src: url("fonts/RockwellNova.ttf") format("tff");
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: block;
+    float: right;
+    text-align: center;
+    padding: 10px 25px;
+    margin: auto 10px;
+    font-family: 'Courier Prime';
+    font-size: 1.3rem;
+    font-weight: bold;
+    box-shadow: inset 0 0 20px 5px rgba(0,200,255,0.3);
+    transition: all 0.3s;
+    border-radius: 30px;
+}
+
+li:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 20px 10px rgba(0,100,255,0.2);
+    text-shadow: 1px 1px deeppink;
+}
+
+.gPageTitle {
+    background: conic-gradient(from 360deg at 50% 0%, rgba(61, 31, 102, 1), rgba(20, 8, 22, 1), rgba(128,23,46,1));
+}
+
+img {
+    outline: 1px hidden whitesmoke;
+    width: 7%;
+    height: auto;
+}
+
+p {
+    font-family: 'PoynterText';
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    text-shadow: 4px 1px blue;
+}
+
+input {
+    font-family: 'Silkscreen';
+    font-size: 2rem;
+    color: whitesmoke;
+    text-shadow: 2px 2px blue;
+    border: none;
+    border-radius: 30px;
+    background: black;
+    box-shadow: inset 0 0 20px 5px rgba(252,3,144,0.3);
+    transition: all 0.3s;
+    padding: 5px 15px;
+}
+
+input:hover {
+    cursor: pointer;
+    box-shadow: inset 0 0 20px 10px rgba(0,100,255,0.2);
+    text-shadow: 2px 2px deeppink;
+}
+
+#pageTitle {
+    outline: 1px solid rgba(36, 1, 3, 0.6);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-bottom: 10px;
+    border-radius: 0 0 20px 20px;
+    font-family: 'Fredericka the Great';
+    font-size: 5.5rem;
+    text-align: center;
+    text-shadow: 3px 3px blue;
+    z-index: 10;
+}
+
+#navig {
+    outline: 1px hidden red;
+    position: fixed;
+    top: 7.3rem;
+    width: 100%;
+    height: 2.6rem;
+    text-shadow: 2px 2px blue;
+    overflow: hidden;
+    background: black;
+    padding: 5px;
+    box-shadow: 5px 5px 20px 0 rgba(0,200,255,0.3);
+    border-radius: 0 0 20px 20px;
+    z-index: 9;
+}
+
+#content {
+    outline: 2px hidden lime;
+    position: relative;
+    top: 12rem;
+    height: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-evenly;
+}
+
+#content > div {
+    outline: 1px hidden aqua;
+    width: 70%;
+    margin-left: 7%;
+    font-family: 'Rockwell Nova';
+    font-size: 1.2rem;
+}
+
+#inicio {
+    
+}
+
+#inicio::after {
+    content: "«uno de los clásicos modernos de la literatura occidental.»";
+    background: linear-gradient(blue, darkcyan, lightblue, cyan);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: block;
+    font-style: italic;
+    font-size: 2rem;
+}
+
+#pic1 {
+    margin-left: 1%;
+    flex-grow: 0.5;
+}
+
+#sinopsis {
+    margin-top: 5rem;
+}
+
+#argumento {
+    margin-top: 5rem;
+    column-count: 3;
+    column-rule: 2px dotted aquamarine;
+    column-gap: 3rem;
+}
+
+#personajes {
+    margin-top: 5rem;
+}
+
+#clearList {
+    list-style-image: url('pics/li-icon-modified.redimensionado.png');
+    list-style-position: inside;
+}
+
+#clearList > li {
+    font-weight: normal;
+    display: list-item;
+    clear: both;
+    text-align: initial;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1rem;
+    box-shadow: none;
+    transition: none;
+    border-radius: 0;
+}
+
+#clearList > li:hover {
+    cursor: initial;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#mas {
+    margin-top: 5rem;
+}
+
+#imageGallery {
+    outline: 1px hidden lime;
+    position: absolute;
+    left: 83%;
+    top: 30%;
+    margin-right: 2%;
+    max-width: 15%;
+}
+
+#igPicList {
+    list-style-type: none;
+    margin-left: -10px;
+    overflow-y: scroll;
+}
+
+#igPicList > img {
+    margin-bottom: 30px;
+}
+
+#igPicList > li {
+    margin-bottom: 10rem;
+}
+
+li .min {
+    width: 40%;
+    border-radius: 10px;
+}
+
+li .max {
+    outline: 3px solid cyan;
+    width: 250px;
+    visibility: hidden;
+    position: fixed;
+    top: 32%;
+    left: 40%;
+    box-shadow: 0px 0px 100px 500px rgba(0, 0, 0, 0.8);
+}
+
+li .tmax {
+    width: 100px;
+    visibility: hidden;
+    position: fixed;
+    top: 40%;
+    left: 20%;
+    font-size: 2.5rem;
+    -webkit-text-stroke: 1px black;
+    text-shadow: 2px 2px cyan;
+}
+
+a:hover .max {
+    visibility: visible;
+}
+
+a:hover .tmax {
+    visibility: visible;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 30px;
+    box-shadow: inset 5px 0 10px 0 rgba(0, 200, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: inset -5px 0 10px 0 rgba(0, 200, 255, 0.5);
+}
